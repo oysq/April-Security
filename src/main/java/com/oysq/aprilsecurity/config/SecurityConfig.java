@@ -11,6 +11,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.formLogin(Customizer.withDefaults())
-                .authorizeRequests(req -> req.antMatchers("/api/geeting").authenticated());
+                .authorizeRequests(req -> req.antMatchers("/api/geeting").hasRole("ADMIN"))
+                .authorizeRequests(req -> req.antMatchers("/api/geeting1").authenticated());
     }
 }

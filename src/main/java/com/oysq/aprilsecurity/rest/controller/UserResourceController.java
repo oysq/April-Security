@@ -13,4 +13,9 @@ public class UserResourceController {
         return "Hello oysq";
     }
 
+    @GetMapping("/geeting1")
+    public String geeting1() {
+        return "Hello oysq 1";
+    }
+
 }
