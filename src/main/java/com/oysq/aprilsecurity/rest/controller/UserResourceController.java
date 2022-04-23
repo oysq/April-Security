@@ -18,4 +18,9 @@ public class UserResourceController {
         return "Hello oysq 1";
     }
 
+    @GetMapping("/hell")
+    public Boolean he() {
+        return false;
+    }
+
 }
